@@ -14,7 +14,7 @@ const JobListings = ({isHome = false}) => {
     const fetchJobs = async () => {
       try {
         // Sending request to the API endpoint
-        const res = await fetch('http://localhost:8000/jobs');
+        const res = await fetch(isHome ? 'http://localhost:8000/jobs?_limit=3' : 'http://localhost:8000/jobs');
         // Parsing response as JSON
         const data = await res.json();
         // Updating the state with the fetched job listings

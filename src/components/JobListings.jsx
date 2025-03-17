@@ -13,9 +13,13 @@ const JobListings = ({isHome = false}) => {
   // Fetch job listings from the server when the component mounts
   useEffect(() => {
     const fetchJobs = async () => {
+
+      // Conditional fetching for home and other pages
+      const apiUrl = isHome ? 'http://localhost:8000/jobs?_limit=3' : 'http://localhost:8000/jobs';
+
       try {
         // Sending request to the API endpoint
-        const res = await fetch(isHome ? 'http://localhost:8000/jobs?_limit=3' : 'http://localhost:8000/jobs');
+        const res = await fetch(apiUrl);
         // Parsing response as JSON
         const data = await res.json();
         // Updating the state with the fetched job listings

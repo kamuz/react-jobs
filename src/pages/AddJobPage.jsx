@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AddJobPage = ({addJobSubmit}) => {
 
@@ -20,8 +21,6 @@ const AddJobPage = ({addJobSubmit}) => {
 
     e.preventDefault();
 
-    console.log(title);
-
     const newJob = {
       title,
       type,
@@ -39,8 +38,12 @@ const AddJobPage = ({addJobSubmit}) => {
     // Pass Function as Prop
     addJobSubmit(newJob);
 
+    toast.success('Job added successfuly', {
+
+    });
+
     // Redirect after submit
-    return navigate('/jobs');
+    return navigate('/jobs', { replace: true });
   }
 
   return (

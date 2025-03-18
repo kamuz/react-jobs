@@ -36,8 +36,10 @@ const AddJobPage = ({addJobSubmit}) => {
       }
     }
 
+    // Pass Function as Prop
     addJobSubmit(newJob);
 
+    // Redirect after submit
     return navigate('/jobs');
   }
 

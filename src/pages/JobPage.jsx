@@ -19,7 +19,7 @@ const JobPage = () => {
             <main>
               {console.log(job)}
               <div className="bg-white p-6 rounded-lg shadow-md text-center md:text-left">
-                <div className="text-gray-500 mb-4">Full-Time</div>
+                <div className="text-gray-500 mb-4">{job.type}</div>
                 <h1 className="text-3xl font-bold mb-4">{job.title}</h1>
                 <div className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
                   <FaMapMarker className="fa-solid fa-location-dot text-xl text-orange-700 mr-2" />

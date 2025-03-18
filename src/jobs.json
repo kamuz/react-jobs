@@ -83,34 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "title": "Enim soluta error at",
-      "type": "Internship",
-      "location": "Possimus velit ad m",
-      "description": "Dolor distinctio Vo",
-      "salary": "Over $200K",
-      "company": {
-        "name": "Simmons and Welch Trading",
-        "description": "Delectus officia ut",
-        "contactEmail": "seko@mailinator.com",
-        "contactPhone": "+1 (139) 978-8461"
-      },
-      "id": "q76EdLf"
-    },
-    {
-      "title": "Nihil aute tempor do",
-      "type": "Remote",
-      "location": "Perspiciatis optio",
-      "description": "Aliqua Anim autem i",
-      "salary": "$175K - 200K",
-      "company": {
-        "name": "Avery Mcconnell Plc",
-        "description": "Qui excepteur suscip",
-        "contactEmail": "sofukiwor@mailinator.com",
-        "contactPhone": "+1 (733) 729-3924"
-      },
-      "id": "JXQAtOg"
     }
   ]
 }

@@ -83,6 +83,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "title": "Enim soluta error at",
+      "type": "Internship",
+      "location": "Possimus velit ad m",
+      "description": "Dolor distinctio Vo",
+      "salary": "Over $200K",
+      "company": {
+        "name": "Simmons and Welch Trading",
+        "description": "Delectus officia ut",
+        "contactEmail": "seko@mailinator.com",
+        "contactPhone": "+1 (139) 978-8461"
+      },
+      "id": "q76EdLf"
     }
   ]
 }

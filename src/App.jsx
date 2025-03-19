@@ -9,6 +9,7 @@ import EditJobPage from "./pages/EditJobPage";
 
 const App = () => {
 
+  // Add new job
   const addJob = async (newJob) => {
     await fetch('/api/jobs', {
       method: 'POST',
@@ -20,6 +21,19 @@ const App = () => {
     return;
   }
 
+  // Update job
+  const updateJob = async (job) => {
+    await fetch(`/api/jobs/${job.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(job)
+    });
+    return;
+  }
+
+  // Delete job
   const deleteJob = async (id) => {
     console.log('delete', id);
     await fetch(`/api/jobs/${id}`, {
@@ -28,6 +42,7 @@ const App = () => {
     return;
   }
 
+  // Routing rules
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
@@ -35,7 +50,7 @@ const App = () => {
         <Route path="/jobs" element={<JobsPage />} />
         <Route path="/add-job" element={<AddJobPage addJobSubmit={addJob} />} />
         <Route path="/jobs/:id" element={<JobPage deleteJob={deleteJob} />} loader={jobLoader} />
-        <Route path="/jobs/edit/:id" element={<EditJobPage />} loader={jobLoader} />
+        <Route path="/jobs/edit/:id" element={<EditJobPage updateJobSubmit={updateJob} />} loader={jobLoader} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     )

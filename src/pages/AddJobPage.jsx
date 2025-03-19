@@ -43,7 +43,7 @@ const AddJobPage = ({addJobSubmit}) => {
     });
 
     // Redirect after submit
-    return navigate('/jobs', { replace: true });
+    return navigate('/jobs');
   }
 
   return (

@@ -47,7 +47,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
     });
 
     // Redirect after submit
-    return navigate(`/jobs/${id}`, { replace: true });
+    return navigate(`/jobs/${id}`);
   }
 
   return (
